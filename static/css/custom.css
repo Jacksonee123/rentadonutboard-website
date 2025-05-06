@@ -1,0 +1,68 @@
+/* static/css/custom.css */
+
+/* Existing rule */
+.content-wrapper img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem; /* Add some space below images */
+}
+
+/* --- Hero Section Styles --- */
+.hero-section {
+    position: relative; /* Needed for overlay positioning */
+    /* !!! Make sure 'FrontSide.png' is the correct filename !!! */
+    background-image: url('/img/FrontPhoto.png');
+    background-size: cover; /* Scale image to cover the div */
+    background-position: center center; /* Center the image */
+    height: 65vh; /* Hero height: 65% of viewport height. Adjust 65vh as needed */
+    display: flex; /* Use flexbox for centering text */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    text-align: center;
+    color: white; /* Default text color for hero */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* Black overlay with 50% opacity. Adjust rgba(0,0,0, 0.5) for darkness/color */
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Place overlay below text */
+}
+
+.hero-content {
+    position: relative; /* Place text above overlay */
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    /* Use standard sans-serif font stack */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5rem;  /* Adjust size if needed */
+    font-weight: bold;   /* Standard bold for sans-serif */
+    color: white;        /* Ensure color is white */
+    margin-bottom: 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Adjust or remove shadow */
+    /* text-transform: uppercase; */ /* Optional: Uncomment to make it uppercase */
+}
+
+/* --- Spacing Adjustments for content below hero --- */
+.content-wrapper h2, .content-wrapper h3 {
+    margin-top: 2rem; /* Add space above headings */
+}
+
+.content-wrapper hr {
+    margin-top: 2rem;
+    margin-bottom: 2rem; /* Add space around horizontal rules */
+}
+
+.content-wrapper p, .content-wrapper ul {
+     margin-bottom: 1rem; /* Standard paragraph/list bottom margin */
+}
