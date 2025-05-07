@@ -1,105 +1,84 @@
-# ==========================================
-# hugo.toml for donutBoard project
-# ==========================================
-
-# --- Basic Hugo Settings ---
-baseURL = "https://rentadonutboard.com/" # IMPORTANT: Temporary, change later when deploying
+baseURL = "https://rentadonutboard.com/"
 languageCode = "en-us"
-# !!! REPLACE 'Jackson's Donut Board Rentals' with your actual business name !!!
-title = "Jackson's Donut Board Rentals"
-theme = "hugo-universal-theme"          # Tells Hugo to use the theme we downloaded
-# themesDir = "../.."                  # Usually not needed unless themes are outside project
+title = "Rent a Donut Board"
+theme = "hugo-universal-theme"
 defaultContentLanguage = "en"
-summaryLength = 70                     # Default summary length for posts (if any)
-pluralizelisttitles = false            # Keeps page titles like "FAQ" instead of "FAQs"
+summaryLength = 70
+pluralizelisttitles = false
 
-# --- Content Rendering Settings ---
 [markup.goldmark.renderer]
-  unsafe = true # Allows raw HTML (needed for calendar embed shortcode later)
+  unsafe = true
 
-# --- Hugo Services (Optional) ---
 [services]
   [services.disqus]
-    shortname = "" # Leave blank to disable Disqus comments
+    shortname = ""
   [services.googleAnalytics]
-    id = "" # Leave blank to disable Google Analytics
+    id = ""
 
-# --- Pagination (Defaults are usually fine) ---
 [pagination]
   pagerSize = 10
 
-# --- Theme Specific Parameters ---
 [params]
-    # !!! REPLACE 'Jackson' with your name or business name !!!
-    author = "Jackson"
-    # !!! WRITE a short description of your service and service area !!!
-    defaultDescription = "Rent our beautiful donut board for your next event in the Wyoming, MI area!"
-    # We are disabling the image logo for now, using text instead.
-    disabled_logo = true
-    # !!! REPLACE 'Jackson's Donut Boards' if you want different text when logo is disabled !!!
-    logo_text = "Jackson's Donut Boards"
-    # If you create a logo image later (e.g., /static/img/logo.png), set disabled_logo=false and update 'logo' path:
-    # logo = "img/logo.png"
-    # logo_small = "img/logo-small.png" # Optional smaller logo for mobile/navbar
+  contact_email = "homesupplies800@gmail.com"
+  contact_phone = "616-635-9461"
+  author = "Rent A Donut Board"
+  defaultDescription = "Rent our beautiful donut board for your next event in the Wyoming, MI area!"
+  disabled_logo = false
+  logo_text = "Prestige Donut Board Rentals"
+  logo = "img/PrestigeDonutLogo.png"
+  logo_small = "img/PrestigeDonutLogo.png"
 
-    # --- Contact & Footer Info ---
-    # !!! REPLACE with your actual email address for contact page link (if used) !!!
-    contact_url = "/#contact-section" # Example link to a section ID on homepage
-    # !!! REPLACE with your actual Copyright info !!!
-    copyright = "Copyright (c) 2025, Jackson's Donut Board Rentals; all rights reserved."
-    # You can put a short "About Us" blurb here if desired, or leave it blank. Uses Markdown.
-    about_us = "<p>Providing fun and delicious donut displays for your special events!</p>"
-    # Remove address details unless you want to display a physical address
-    address = """"""
+  # --- Contact & Footer Info ---
+  contact_url = "/#contact-section"
+  copyright = "Copyright (c) 2025, Prestige Donut Board Rentals; all rights reserved."
+  about_us = "<p>Providing fun and delicious donut displays for your special events!</p>"
+  address = """"""
 
-    # --- Top Bar Configuration ---
-    [params.topbar]
-      enable = true # Show the top bar
-      # !!! REPLACE with your actual contact info !!! Use <br> for line breaks if needed.
-      text = """<p class="hidden-sm hidden-xs">Call us: 555-123-4567 | Email: your_email@example.com</p>
-          <p class="hidden-md hidden-lg"><a href="tel:555-123-4567" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
-          <a href="mailto:your_email@example.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
-          </p>
-          """
+  # --- Top Bar Configuration ---
+  [params.topbar]
+    enable = true
+    text = """<p class="hidden-sm hidden-xs">Call us: 616-635-9461 | Email: homesupplies800@gmail.com</p>
+      <p class="hidden-md hidden-lg"><a href="tel:616-635-9461" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
+      <a href="mailto:homesupplies800@gmail.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
+      </p>
+      """
 
-    # --- Styling ---
-    style = "default" # Options: default, blue, green, marsala, pink, red, turquoise, violet
-    dropdown_mouse_over = false
+  # --- Styling ---
+  style = "default"
+  dropdown_mouse_over = false
 
-    # --- Date Formatting ---
-    date_format = "January 2, 2006"
+  # --- Date Formatting ---
+  date_format = "January 2, 2006"
 
-    # --- Disabled Features (for simplicity) ---
-    enableGoogleMaps = false
-    formspree_action = ""
-    contact_form_ajax = false
-    enableRecaptchaInContactForm = false
-    mainSections = [] # No primary list sections like 'blog'
+  # --- Disabled Features ---
+  enableGoogleMaps = false
+  formspree_action = ""
+  contact_form_ajax = false
+  enableRecaptchaInContactForm = false
+  mainSections = []
 
-    [params.carouselHomepage]
-      enable = false # Disable homepage carousel
-    [params.features]
-      enable = false # Disable features section
-    [params.testimonials]
-      enable = false # Disable testimonials section
-    [params.see_more]
-      # Disable this specific theme section too
-      enable = false
-    [params.clients]
-      enable = false # Disable clients section
-    [params.recent_posts]
-      enable = false # Disable recent posts section
-    [params.footer.recent_posts]
-      enable = false # Disable recent posts in footer
+  [params.carouselHomepage]
+    enable = false
+  [params.features]
+    enable = false
+  [params.testimonials]
+    enable = false
+  [params.see_more]
+    enable = false
+  [params.clients]
+    enable = false
+  [params.recent_posts]
+    enable = false
+  [params.footer.recent_posts]
+    enable = false
 
-    [params.widgets] # Sidebar widgets, disable all
-      categories = false
-      tags = false
-      search = false
+  [params.widgets]
+    categories = false
+    tags = false
+    search = false
 
 # --- Hugo Built-in Settings ---
 [permalinks]
-  # Default permalinks are usually fine
 
 [taxonomies]
   category = "categories"
@@ -107,56 +86,14 @@ pluralizelisttitles = false            # Keeps page titles like "FAQ" instead of
   author = "authors"
 
 # --- Menus ---
-
-# Main menu (Navbar) - Uncomment and modify if you want a simple navbar
-# The URLs link to sections on the homepage using the '#' symbol + the section's 'id'
-# We will need to make sure the corresponding sections in _index.md have these IDs.
-#[menu]
-#  [[menu.main]]
-#    name       = "Home"
-#    identifier = "menu.home"
-#    url        = "/"
-#    weight     = 1
-#  [[menu.main]]
-#    name       = "Gallery"
-#    identifier = "menu.gallery"
-#    url        = "/#gallery-section" # Matches id in _index.md
-#    weight     = 2
-#  [[menu.main]]
-#    name       = "Book Now"
-#    identifier = "menu.booking"
-#    url        = "/#booking-section" # Matches id in _index.md
-#    weight     = 3
-#  [[menu.main]]
-#    name       = "Contact"
-#    identifier = "menu.contact"
-#    url        = "/#contact-section" # Matches id in _index.md
-#    weight     = 4
-
-# Top bar social links menu (Keep this section from the example, modify URLs/icons)
 [[menu.topbar]]
-    weight = 1
-    name = "Phone"
-    url = "tel:555-123-4567" # !!! REPLACE with your actual phone number !!!
-    pre = "<i class='fas fa-phone'></i>" # Font Awesome phone icon
+  weight = 1
+  name = "Phone"
+  url = "tel:616-635-9461"
+  pre = "<i class='fas fa-phone'></i>"
 
 [[menu.topbar]]
-    weight = 2
-    name = "Email"
-    url = "mailto:your_email@example.com" # !!! REPLACE with your actual email !!!
-    pre = "<i class='fas fa-envelope'></i>" # Font Awesome email icon
-
-# Add other social links if needed (copy format from example, update url/pre)
-# Example: Facebook
-#[[menu.topbar]]
-#   weight = 3
-#   name = "Facebook"
-#   url = "https://facebook.com/your_page_here" # !!! REPLACE !!!
-#   pre = "<i class='fab fa-facebook'></i>"
-
-# Example: Instagram
-#[[menu.topbar]]
-#   weight = 4
-#   name = "Instagram"
-#   url = "https://instagram.com/your_profile_here" # !!! REPLACE !!!
-#   pre = "<i class='fab fa-instagram'></i>"
+  weight = 2
+  name = "Email"
+  url = "mailto:homesupplies800@gmail.com"
+  pre = "<i class='fas fa-envelope'></i>"

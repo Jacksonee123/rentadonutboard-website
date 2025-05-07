@@ -1,0 +1,64 @@
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 col-sm-6">
+                <h4>About Us</h4>
+                {{ with .Site.Params.about_us }}
+                    {{ . | safeHTML }}
+                {{ else }}
+                    <p>Providing fun and delicious donut displays for your special events!</p>
+                {{ end }}
+                <hr class="hidden-md hidden-lg hidden-sm">
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <hr class="hidden-md hidden-lg hidden-sm">
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h4>Contact Info</h4>
+                {{ with .Site.Params.contact_phone }}
+                <p style="margin-bottom: 8px;">
+                    <i class="fas fa-phone" style="margin-right: 8px; width: 1em; text-align: center;"></i>&nbsp;
+                    <a href="tel:{{ . }}">{{ . }}</a>
+                </p>
+                {{ end }}
+                {{ with .Site.Params.contact_email }}
+                <p style="margin-bottom: 8px;">
+                    <i class="fas fa-envelope" style="margin-right: 8px; width: 1em; text-align: center;"></i>&nbsp;
+                    <a href="mailto:{{ . }}">{{ . }}</a>
+                </p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div id="copyright">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="pull-left">
+                    {{ with .Site.Params.copyright }}
+                        {{ . | safeHTML }}
+                    {{ else }}
+                        &copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.
+                    {{ end }}
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <p class="pull-right">
+                    {{ with .Site.Params.designed_by }}
+                        {{ . | safeHTML }}
+                    {{ else }}
+                        Template by <a href="https://bootstrapious.com/p/universal-business-e-commerce-template">Bootstrapious</a>.
+                    {{ end }}
+                    {{ with .Site.Params.ported_by }}
+                        {{ . | safeHTML }}
+                    {{ else }}
+                        Ported to Hugo by <a href="https://github.com/devcows/hugo-universal-theme">DevCows</a>.
+                    {{ end }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

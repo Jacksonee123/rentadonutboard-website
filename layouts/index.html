@@ -3,48 +3,32 @@
 
   <head>
     {{ partial "headers.html" . }}
-    {{ partial "custom_headers.html" . }} {{/* Includes custom.css */}}
+    {{ partial "custom_headers.html" . }}
   </head>
 
   <body>
-
     <div id="all">
-
       {{ partial "top.html" . }}
       {{ partial "nav.html" . }}
 
-      {{/* ================================================ */}}
-      {{/* START: Hero Section                            */}}
-      {{/* ================================================ */}}
       <section class="hero-section">
-        <div class="hero-overlay"></div> {{/* This creates the haze effect */}}
+        <div class="hero-overlay"></div>
         <div class="hero-content">
-          <h1>Rent Our Donut Board!</h1> {{/* The overlay text */}}
-          {{/* Optional: You could add a subtitle here if desired */}}
-          {{/* <p>Optional Subtitle Here</p> */}}
+          <h1>Rent Our Donut Board!</h1>
         </div>
       </section>
-      {{/* ================================================ */}}
-      {{/* END: Hero Section                              */}}
-      {{/* ================================================ */}}
 
+      <div class="brown-accent-bar"></div>
 
-      {{/* ================================================ */}}
-      {{/* START: Main content area from _index.md        */}}
-      {{/* ================================================ */}}
-      <div id="content">
-        <div class="container content-wrapper" style="padding-top: 40px; padding-bottom: 40px;">
-            {{ .Content }} {{/* Renders the content from _index.md BELOW the hero */}}
+      <div id="main-content-area" class="content-wrapper" style="background-color: white; padding-top: 10px; padding-bottom: 40px;">
+        <div class="container">
+            {{ .Content }}
         </div>
       </div>
-      {{/* ================================================ */}}
-      {{/* END: Main content area                         */}}
-      {{/* ================================================ */}}
 
       {{ partial "footer.html" . }}
-
     </div>
+    
     {{ partial "scripts.html" . }}
-
   </body>
 </html>
