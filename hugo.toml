@@ -13,7 +13,7 @@ pluralizelisttitles = false
   [services.disqus]
     shortname = ""
   [services.googleAnalytics]
-    id = ""
+    id = "G-BTK2X6PL44"
 
 [pagination]
   pagerSize = 10
@@ -37,7 +37,7 @@ pluralizelisttitles = false
   # --- Top Bar Configuration ---
   [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Call us: 616-635-9461 | Email: homesupplies800@gmail.com</p>
+    text = """<p class="hidden-sm hidden-xs">Message Us Through Email: homesupplies800@gmail.com</p>
       <p class="hidden-md hidden-lg"><a href="tel:616-635-9461" data-animate-hover="pulse"><i class="fas fa-phone"></i></a>
       <a href="mailto:homesupplies800@gmail.com" data-animate-hover="pulse"><i class="fas fa-envelope"></i></a>
       </p>
